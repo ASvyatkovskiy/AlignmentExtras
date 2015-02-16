@@ -8,10 +8,10 @@ from subprocess import Popen
 #final round
 dofs = ['x','y','z','Phix','Phiy','Phiz']
 Scenarios = [0.,0.5,1.,2.,10.]
-Sigmas = {"x":(0.02,0.03),"y":(0.1,0.2),"z":(0.08,1.0),"Phix":(0.0003,0.01),"Phiy":(0.001,0.025),"Phiz":(0.0001,0.0004)}
+APESigmas = {"x":(0.02,0.03),"y":(0.1,0.2),"z":(0.08,1.0),"Phix":(0.0003,0.01),"Phiy":(0.001,0.025),"Phiz":(0.0001,0.0004)}
 APEs = {"x":([],[]),"y":([],[]),"z":([],[]),"Phix":([],[]),"Phiy":([],[]),"Phiz":([],[])}
 for dof in dofs:
-    for scenario in Scenarios:
+    for scenario in APEScenarios:
         #DT
         APEs[dof][0].append((pow(Sigmas[dof][0]*scenario,2)))
         #CSC
